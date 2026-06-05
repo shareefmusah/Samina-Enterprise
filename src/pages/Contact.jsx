@@ -171,7 +171,7 @@ export default function Contact() {
               {submitSuccess && (
                 <div className="mb-6 p-4 bg-green-50 border-2 border-green-400 text-green-700 rounded-lg animate-scale-in">
                   <p className="font-semibold">Thank you for your message!</p>
-                  <p>We\&apos;ll get back to you as soon as possible.</p>
+                  <p>We'll get back to you as soon as possible.</p>
                 </div>
               )}
 
