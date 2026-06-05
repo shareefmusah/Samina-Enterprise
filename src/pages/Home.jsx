@@ -5,45 +5,51 @@ import { ArrowRightIcon, QualityIcon, NutritionIcon, HygieneIcon, LocalIcon, Quo
 const FEATURED_PRODUCTS = [
   {
     id: 1,
-    name: 'Tombrown',
-    description: 'Traditional blend of grains for energy-rich breakfast',
+    name: 'Dawadawa Beverage',
+    description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     price: '30',
-    category: 'Cereals',
+    category: 'Beverages',
+    image: '/Samina1.jpg'
   },
   {
     id: 2,
-    name: 'Cereal Mix',
-    description: 'Nutritious combination of healthy whole grains',
+    name: 'Natural Spices',
+    description: 'A blend of natural spices sourced from Ghanaian farmers, perfect for enhancing the flavor of your dishes',
     price: '40',
     category: 'Cereals',
+    image: '/Samina2.jpg'
   },
   {
     id: 3,
-    name: 'Cashew Nut Blend',
-    description: 'Premium roasted cashews mixed with nutritious seeds',
+    name: 'native honey',
+    description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     price: '45',
     category: 'Nuts',
+    image: '/Samina3.jpg'
   },
   {
     id: 4,
-    name: 'Millet Mix',
-    description: 'Fine millet flour blend perfect for porridge',
+    name: 'CerealPlus (cereal legume mix with cashew nuts)',
+    description: 'A nutritious blend of cereals and legumes, enriched with cashew nuts for added flavor and health benefits',
     price: '35',
     category: 'Cereals',
+    image: '/Samina4.jpg'
   },
   {
     id: 5,
-    name: 'Soybean Mix',
-    description: 'Protein-rich soybean blend for nutrition',
+    name: 'Dawadawa Beverage',
+    description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     price: '38',
-    category: 'Legumes',
+    category: 'Beverages',
+    image: '/Samina5.jpg'
   },
   {
     id: 6,
-    name: 'Weaning Food Mix',
-    description: 'Specially formulated for baby nutrition and development',
-    price: '42',
-    category: 'Special Products',
+    name: 'Hausa Koko Flour',
+    description: 'Spicy millet flour (CerealPlus) for a perfect morning breakfast',
+    price: '36',
+    category: 'Cereals',
+    image: '/Samina9.jpg'
   },
 ]
 
@@ -95,7 +101,7 @@ export default function Home() {
   return (
     <div className="page-enter">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-green-700 text-white py-20 md:py-32">
+      <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-20 md:pt-48 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-left">
@@ -122,20 +128,12 @@ export default function Home() {
               </div>
             </div>
             <div className="animate-fade-in-right">
-              <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-                <svg
-                  className="w-full h-auto"
-                  viewBox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="100" cy="100" r="90" fill="rgba(255, 255, 255, 0.1)" stroke="white" strokeWidth="2" />
-                  <path
-                    d="M100 40C90 50 85 70 85 90C85 110 90 130 100 140C110 130 115 110 115 90C115 70 110 50 100 40Z"
-                    fill="white"
-                  />
-                  <circle cx="100" cy="90" r="8" fill="#F9A825" />
-                </svg>
+              <div className="bg-white rounded-3xl p-6 shadow-2xl overflow-hidden animate-pulse-slow">
+                <img 
+                  src="/Saminalogo.jpg" 
+                  alt="Samina Enterprise" 
+                  className="w-full h-auto rounded-2xl"
+                />
               </div>
             </div>
           </div>
@@ -187,14 +185,12 @@ export default function Home() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Product Image Placeholder */}
-                <div className="bg-gradient-to-br from-primary to-secondary h-48 flex items-center justify-center relative overflow-hidden">
-                  <svg
-                    className="w-24 h-24 text-white opacity-30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" />
-                  </svg>
+                <div className="h-64 flex items-center justify-center relative overflow-hidden bg-gray-100">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
                 </div>
 
                 <div className="p-6">

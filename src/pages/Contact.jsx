@@ -106,10 +106,10 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-dark mb-2">Call Us</h3>
               <p className="text-gray-600 mb-2">Speak with our team</p>
               <a
-                href="tel:+233123456789"
+                href="tel:+233 24 6828 4621"
                 className="text-primary font-bold hover:text-secondary transition-colors"
               >
-                +233 123 456 789
+                +233 24 6828 4621
               </a>
             </div>
 
@@ -121,12 +121,12 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-dark mb-2">WhatsApp</h3>
               <p className="text-gray-600 mb-2">Quick messaging</p>
               <a
-                href="https://wa.me/233123456789"
+                href="https://wa.me/233 24 6828 4621"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-bold hover:text-secondary transition-colors"
               >
-                +233 123 456 789
+                +233 24 6828 4621
               </a>
             </div>
 
@@ -320,7 +320,7 @@ export default function Contact() {
                   width="100%"
                   height="100%"
                   frameBorder="0"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.2356284937356!2d-0.16789482346054744!3d5.603197932644255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sAccra!2sGhana!5e0!3m2!1sen!2sgh!4v1234567890"
+                  src="https://www.google.com/maps/place/Samiina+Foods/@9.4282366,-0.8473981,18z/data=!4m9!1m2!2m1!1ssamina+enterprise+location+near+Tamale!3m5!1s0xfd43d3d71b674f5:0xdc103260152c10ba!8m2!3d9.4282367!4d-0.8457455!16s%2Fg%2F11sycy7z77?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

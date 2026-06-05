@@ -28,7 +28,7 @@ export default function About() {
   return (
     <div className="page-enter">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-green-700 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-16 md:pt-48 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">About Samina Enterprise</h1>
@@ -49,25 +49,19 @@ export default function About() {
                 Samina Enterprise was founded with a simple yet powerful vision: to provide premium processed foods that are both nutritious and delicious. We started our journey with a commitment to excellence and a passion for improving family nutrition across Ghana.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                What began as a small operation has grown into a trusted brand serving thousands of families throughout Ghana. Our success is built on three pillars: quality ingredients, hygienic processing, and a deep understanding of our customers\' needs.
+                What began as a small operation has grown into a trusted brand serving thousands of families throughout Ghana. Our success is built on three pillars: quality ingredients, hygienic processing, and a deep understanding of our customers' needs.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Today, we continue to innovate and expand our product line, always keeping our core values at the heart of everything we do.
               </p>
             </div>
             <div className="animate-fade-in-right">
-              <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-12 text-white">
-                <svg
-                  className="w-full h-auto"
-                  viewBox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="100" cy="100" r="90" fill="rgba(255, 255, 255, 0.1)" stroke="white" strokeWidth="2" />
-                  <rect x="60" y="50" width="80" height="100" rx="8" fill="rgba(255, 255, 255, 0.2)" stroke="white" strokeWidth="2" />
-                  <circle cx="100" cy="80" r="15" fill="white" opacity="0.7" />
-                  <path d="M80 120 L100 140 L120 120" stroke="white" strokeWidth="2" fill="none" />
-                </svg>
+              <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
+                <img 
+                  src="/Saminalogo.jpg" 
+                  alt="Samina Enterprise Branding" 
+                  className="w-full h-auto rounded-2xl"
+                />
               </div>
             </div>
           </div>

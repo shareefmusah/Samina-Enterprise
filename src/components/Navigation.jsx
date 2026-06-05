@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LogoIcon, MenuIcon, CloseIcon } from './Icons'
+import { MenuIcon, CloseIcon } from './Icons'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -21,14 +21,18 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-lg animate-slide-down">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] sm:w-[95%] max-w-7xl z-50 bg-white/90 backdrop-blur-md shadow-lg rounded-2xl animate-slide-down overflow-hidden border border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <LogoIcon />
-            <span className="hidden sm:inline text-lg font-bold text-primary group-hover:text-secondary transition-colors">
-              Samina
+            <img 
+              src="/Saminalogo.jpg" 
+              alt="Samina Enterprise Logo" 
+              className="w-10 h-10 object-contain rounded-full border border-gray-100"
+            />
+            <span className="text-base sm:text-lg font-bold text-primary group-hover:text-secondary transition-colors">
+              Samina Enterprise
             </span>
           </Link>
 

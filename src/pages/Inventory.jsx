@@ -4,99 +4,111 @@ import { SearchIcon, FilterIcon } from '../components/Icons'
 const ALL_PRODUCTS = [
   {
     id: 1,
-    name: 'Tombrown',
-    category: 'Cereals',
-    description: 'Traditional blend of grains for energy-rich breakfast',
+    name: 'Dawadawa Beverage',
+    category: 'Beverages',
+    description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
     price: '30',
+    image: '/Samina1.jpg'
   },
   {
     id: 2,
-    name: 'Cereal Mix',
-    category: 'Cereals',
-    description: 'Nutritious combination of healthy whole grains',
+    name: 'Natural Spices',
+    category: 'Spices',
+    description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '1kg',
     price: '40',
+    image: '/Samina2.jpg'
   },
   {
     id: 3,
-    name: 'Legume Blend',
-    category: 'Legumes',
-    description: 'Protein-rich blend of assorted legumes',
+    name: 'Native Honey',
+    category: 'Special Products',
+    description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     weight: '500g',
     price: '35',
+    image: '/Samina3.jpg'
   },
   {
     id: 4,
-    name: 'Cashew Nut Mix',
+    name: 'CerealPlus (cereal legume mix with cashew nuts)',
     category: 'Nuts',
-    description: 'Premium roasted cashews mixed with nutritious seeds',
+    description: 'A nutritious blend of cereals and legumes, enriched with cashew nuts for added flavor and health benefits',
     weight: '500g',
     price: '45',
+    image: '/Samina4.jpg'
   },
   {
     id: 5,
-    name: 'Soybean Mix',
-    category: 'Legumes',
-    description: 'Protein-rich soybean blend for complete nutrition',
-    weight: '1kg',
-    price: '38',
+    name: 'Dawadawa Beverage',
+    category: 'Beverages',
+    description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
+    weight: '500g',
+    price: '30',
+    image: '/Samina5.jpg'
   },
   {
     id: 6,
-    name: 'Millet Flour',
-    category: 'Cereals',
-    description: 'Fine millet flour blend perfect for porridge',
+    name: 'Groundnut paste',
+    category: 'Special Products',
+    description: 'Rich and creamy groundnut paste made from premium roasted peanuts, perfect for cooking or as a spread',
     weight: '1kg',
-    price: '32',
+    price: '150',
+    image: '/Samina6.jpg'
   },
   {
     id: 7,
-    name: 'Rice Mix',
-    category: 'Cereals',
-    description: 'Blend of quality rice varieties for perfect meals',
-    weight: '1kg',
-    price: '37',
+    name: 'Native Honey',
+    category: 'Special Products',
+    description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
+    weight: '500g',
+    price: '200',
+    image: '/Samina7.jpg'
   },
   {
     id: 8,
-    name: 'Weaning Food Mix',
+    name: 'Ginger Powder',
     category: 'Special Products',
-    description: 'Specially formulated for baby nutrition and development',
+    description: 'Finely ground ginger powder made from fresh ginger roots, perfect for cooking and baking',
     weight: '500g',
     price: '42',
+    image: '/Samina8.jpg'
   },
   {
     id: 9,
-    name: 'Groundnut Butter',
-    category: 'Blends',
-    description: 'Natural groundnut paste, rich in protein',
+    name: 'Hausa Koko Flour',
+    category: 'Cereals',
+    description: 'Spicy millet flour (CerealPlus) for traditional Ghanaian breakfast',
     weight: '500g',
     price: '36',
+    image: '/Samina9.jpg'
   },
   {
     id: 10,
-    name: 'Corn Flour',
-    category: 'Cereals',
-    description: 'Fine corn flour for traditional dishes',
-    weight: '1kg',
-    price: '28',
+    name: 'Dawadawa Beverage',
+    category: 'Beverages',
+    description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
+    weight: '500g',
+    price: '30',
+    image: '/Samina1.jpg'
   },
   {
     id: 11,
-    name: 'Mixed Nuts',
+    name: 'CerealPlus (cereal legume mix with cashew nuts)',
     category: 'Nuts',
     description: 'Premium blend of roasted nuts and seeds',
     weight: '500g',
     price: '50',
+    image: '/Samina4.jpg'
   },
   {
     id: 12,
-    name: 'Healthy Snack Mix',
+    name: 'Natural Spices',
     category: 'Blends',
-    description: 'Nutritious mix of grains, nuts, and seeds',
+    description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '500g',
     price: '44',
+    image: '/Samina2.jpg'
   },
 ]
 
@@ -130,7 +142,7 @@ export default function Inventory() {
   return (
     <div className="page-enter">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-green-700 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-16 md:pt-48 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Samina Enterprise - Our Products</h1>
@@ -231,14 +243,12 @@ export default function Inventory() {
                   style={{ animationDelay: `${(index % 6) * 0.1}s` }}
                 >
                   {/* Product Image Placeholder */}
-                  <div className="bg-gradient-to-br from-primary to-secondary h-48 flex items-center justify-center relative overflow-hidden">
-                    <svg
-                      className="w-24 h-24 text-white opacity-30"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" />
-                    </svg>
+                <div className="h-56 flex items-center justify-center relative overflow-hidden bg-gray-50 border-b border-gray-100">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                   </div>
 
                   <div className="p-6">
