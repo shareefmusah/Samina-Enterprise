@@ -27,7 +27,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img 
-              src="/Saminalogo.jpg" 
+              src="/saminalogo.jpg" 
               alt="Samina Enterprise Logo" 
               className="w-10 h-10 object-contain rounded-full border border-gray-100"
             />

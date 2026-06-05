@@ -9,7 +9,7 @@ const FEATURED_PRODUCTS = [
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     price: '30',
     category: 'Beverages',
-    image: '/Samina1.jpg'
+    image: '/samina1.jpg'
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const FEATURED_PRODUCTS = [
     description: 'A blend of natural spices sourced from Ghanaian farmers, perfect for enhancing the flavor of your dishes',
     price: '40',
     category: 'Cereals',
-    image: '/Samina2.jpg'
+    image: '/samina2.jpg'
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const FEATURED_PRODUCTS = [
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     price: '45',
     category: 'Nuts',
-    image: '/Samina3.jpg'
+    image: '/samina3.jpg'
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const FEATURED_PRODUCTS = [
     description: 'A nutritious blend of cereals and legumes, enriched with cashew nuts for added flavor and health benefits',
     price: '35',
     category: 'Cereals',
-    image: '/Samina4.jpg'
+    image: '/samina4.jpg'
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const FEATURED_PRODUCTS = [
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     price: '38',
     category: 'Beverages',
-    image: '/Samina5.jpg'
+    image: '/samina5.jpg'
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const FEATURED_PRODUCTS = [
     description: 'Spicy millet flour (CerealPlus) for a perfect morning breakfast',
     price: '36',
     category: 'Cereals',
-    image: '/Samina9.jpg'
+    image: '/samina9.jpg'
   },
 ]
 
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="animate-fade-in-right">
               <div className="bg-white rounded-3xl p-6 shadow-2xl overflow-hidden animate-pulse-slow">
                 <img 
-                  src="/Saminalogo.jpg" 
+                  src="/saminalogo.jpg" 
                   alt="Samina Enterprise" 
                   className="w-full h-auto rounded-2xl"
                 />

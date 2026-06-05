@@ -58,7 +58,7 @@ export default function About() {
             <div className="animate-fade-in-right">
               <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
                 <img 
-                  src="/Saminalogo.jpg" 
+                  src="/saminalogo.jpg" 
                   alt="Samina Enterprise Branding" 
                   className="w-full h-auto rounded-2xl"
                 />

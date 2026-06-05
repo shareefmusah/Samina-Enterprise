@@ -9,7 +9,7 @@ const ALL_PRODUCTS = [
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
     price: '30',
-    image: '/Samina1.jpg'
+    image: '/samina1.jpg'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
     description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '1kg',
     price: '40',
-    image: '/Samina2.jpg'
+    image: '/samina2.jpg'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const ALL_PRODUCTS = [
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     weight: '500g',
     price: '35',
-    image: '/Samina3.jpg'
+    image: '/samina3.jpg'
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const ALL_PRODUCTS = [
     description: 'A nutritious blend of cereals and legumes, enriched with cashew nuts for added flavor and health benefits',
     weight: '500g',
     price: '45',
-    image: '/Samina4.jpg'
+    image: '/samina4.jpg'
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const ALL_PRODUCTS = [
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
     price: '30',
-    image: '/Samina5.jpg'
+    image: '/samina5.jpg'
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const ALL_PRODUCTS = [
     description: 'Rich and creamy groundnut paste made from premium roasted peanuts, perfect for cooking or as a spread',
     weight: '1kg',
     price: '150',
-    image: '/Samina6.jpg'
+    image: '/samina6.jpg'
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ const ALL_PRODUCTS = [
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     weight: '500g',
     price: '200',
-    image: '/Samina7.jpg'
+    image: '/samina7.jpg'
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const ALL_PRODUCTS = [
     description: 'Finely ground ginger powder made from fresh ginger roots, perfect for cooking and baking',
     weight: '500g',
     price: '42',
-    image: '/Samina8.jpg'
+    image: '/samina8.jpg'
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ const ALL_PRODUCTS = [
     description: 'Spicy millet flour (CerealPlus) for traditional Ghanaian breakfast',
     weight: '500g',
     price: '36',
-    image: '/Samina9.jpg'
+    image: '/samina9.jpg'
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ const ALL_PRODUCTS = [
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
     price: '30',
-    image: '/Samina1.jpg'
+    image: '/samina1.jpg'
   },
   {
     id: 11,
@@ -99,7 +99,7 @@ const ALL_PRODUCTS = [
     description: 'Premium blend of roasted nuts and seeds',
     weight: '500g',
     price: '50',
-    image: '/Samina4.jpg'
+    image: '/samina4.jpg'
   },
   {
     id: 12,
@@ -108,7 +108,7 @@ const ALL_PRODUCTS = [
     description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '500g',
     price: '44',
-    image: '/Samina2.jpg'
+    image: '/samina2.jpg'
   },
 ]
 
