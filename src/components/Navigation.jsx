@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { MenuIcon, CloseIcon } from './Icons'
 
 export default function Navigation() {
@@ -39,13 +39,15 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-1">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.path}
                 to={link.path}
-                className="px-4 py-2 rounded-lg text-dark hover:bg-primary hover:text-white transition-all duration-300 font-medium"
+                className={({ isActive }) => 
+                  `px-4 py-2 rounded-lg transition-all duration-300 font-medium ${isActive ? 'bg-primary text-white' : 'text-dark hover:bg-primary/10'}`
+                }
               >
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 

@@ -55,7 +55,7 @@ export default function Footer() {
                 <PhoneIcon />
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p>+233 123 456 789</p>
+                  <p>+233 24 6828 4621</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 hover:text-secondary transition-colors">
@@ -69,7 +69,7 @@ export default function Footer() {
                 <MapIcon />
                 <div>
                   <p className="font-semibold">Location</p>
-                  <p>Accra, Ghana</p>
+                  <p>Tamale Northen Region, Ghana</p>
                 </div>
               </div>
             </div>
@@ -92,6 +92,15 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <InstagramIcon />
+              </a>
+              <a
+                href="https://wa.me/2332468284621"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-gray-700 hover:bg-secondary transition-colors"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon />
               </a>
               <a
                 href="#"

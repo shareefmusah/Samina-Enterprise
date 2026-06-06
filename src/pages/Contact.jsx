@@ -106,7 +106,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-dark mb-2">Call Us</h3>
               <p className="text-gray-600 mb-2">Speak with our team</p>
               <a
-                href="tel:+233 24 6828 4621"
+                href="tel:+2332468284621"
                 className="text-primary font-bold hover:text-secondary transition-colors"
               >
                 +233 24 6828 4621
@@ -121,7 +121,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-dark mb-2">WhatsApp</h3>
               <p className="text-gray-600 mb-2">Quick messaging</p>
               <a
-                href="https://wa.me/233 24 6828 4621"
+                href="https://wa.me/2332468284621"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-bold hover:text-secondary transition-colors"
@@ -152,9 +152,14 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-dark mb-2">Visit us</h3>
               <p className="text-gray-600 mb-2">Our office</p>
-              <p className="text-primary font-bold">
+              <a
+                href="https://www.google.com/maps/place/Samiina+Foods/@9.4282366,-0.8473981,18z/data=!4m9!1m2!2m1!1ssamina+enterprise+location+near+Tamale!3m5!1s0xfd43d3d71b674f5:0xdc103260152c10ba!8m2!3d9.4282367!4d-0.8457455!16s%2Fg%2F11sycy7z77?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-bold hover:text-secondary transition-colors"
+              >
                 Tamale, Agric Quarters, Ghana
-              </p>
+              </a>
             </div>
           </div>
         </div>
