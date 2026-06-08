@@ -80,7 +80,7 @@ const TESTIMONIALS = [
   {
     name: 'Ama Osei',
     role: 'Mother of two',
-    text: 'Samina Enterprise products have become a staple in our home. The quality is exceptional and my children love the taste!',
+    text: 'Samiina Enterprise products have become a staple in our home. The quality is exceptional and my children love the taste!',
     rating: 5,
   },
   {
@@ -92,7 +92,7 @@ const TESTIMONIALS = [
   {
     name: 'Akosua Boateng',
     role: 'Restaurant owner',
-    text: 'Using Samina Enterprise products has significantly improved our menu offerings. Our customers keep asking for more!',
+    text: 'Using Samiina Enterprise products has significantly improved our menu offerings. Our customers keep asking for more!',
     rating: 5,
   },
 ]
@@ -113,7 +113,7 @@ export default function Home() {
   const handleShare = (product) => {
     if (navigator.share) {
       navigator.share({
-        title: `Samina Enterprise - ${product.name}`,
+      title: `Samiina Enterprise - ${product.name}`,
         text: product.description,
         url: window.location.href,
       }).catch(() => {})
@@ -134,7 +134,7 @@ export default function Home() {
                 Healthy Foods, Naturally Processed
               </h1>
               <p className="text-lg md:text-xl text-gray-100 mb-8">
-                Premium Tombrown, Cereal Mixes, Legume Blends, and Nutritious Food Products from Samina Enterprise.
+                Premium Tombrown, Cereal Mixes, Legume Blends, and Nutritious Food Products from Samiina Enterprise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -156,7 +156,7 @@ export default function Home() {
               <div className="bg-white rounded-3xl p-6 shadow-2xl overflow-hidden animate-pulse-slow">
                 <img 
                   src="/saminalogo.jpg" 
-                  alt="Samina Enterprise" 
+                  alt="Samiina Enterprise" 
                   className="w-full h-auto rounded-2xl"
                   fetchpriority="high"
                 />
@@ -171,7 +171,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-dark dark:text-white">Why Choose Us?</h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-            Discover what makes Samina Enterprise the preferred choice for families across Ghana.
+            Discover what makes Samiina Enterprise the preferred choice for families across Ghana.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -231,7 +231,7 @@ export default function Home() {
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-secondary">GHS {product.price}</span>
                     <a
-                      href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in ordering the ${product.name}.`}
+                      href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in ordering the ${product.name}.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -302,7 +302,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in ordering the ${selectedProduct.name}.`}
+                  href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in ordering the ${selectedProduct.name}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"
@@ -322,18 +322,18 @@ export default function Home() {
       )}
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-light dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-dark">Customer Reviews</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            See what our satisfied customers have to say about Samina Enterprise.
+          <h2 className="text-4xl font-bold text-center mb-4 text-dark dark:text-white">Customer Reviews</h2>
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+            See what our satisfied customers have to say about Samiina Enterprise.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg relative animate-fade-in"
+                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg relative animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="absolute top-4 right-4">
@@ -346,11 +346,11 @@ export default function Home() {
                   ))}
                 </div>
 
-                <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
 
-                <div className="border-t pt-4">
-                  <p className="font-bold text-dark">{testimonial.name}</p>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                <div className="border-t dark:border-gray-700 pt-4">
+                  <p className="font-bold text-dark dark:text-white">{testimonial.name}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             ))}

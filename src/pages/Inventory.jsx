@@ -159,7 +159,7 @@ export default function Inventory() {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: `Samina Enterprise - ${selectedProduct.name}`,
+        title: `Samiina Enterprise - ${selectedProduct.name}`,
         text: selectedProduct.description,
         url: window.location.href,
       }).catch(() => {})
@@ -175,7 +175,7 @@ export default function Inventory() {
       <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-16 md:pt-48 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Samina Enterprise - Our Products</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Samiina Enterprise - Our Products</h1>
             <p className="text-xl text-gray-100">
               Premium processed foods to nourish your family.
             </p>
@@ -380,7 +380,7 @@ export default function Inventory() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in the ${selectedProduct.name}.`}
+                  href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in the ${selectedProduct.name}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"
@@ -403,7 +403,7 @@ export default function Inventory() {
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-primary to-green-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Interested in Samina Enterprise Products?</h2>
+          <h2 className="text-4xl font-bold mb-4">Interested in Samiina Enterprise Products?</h2>
           <p className="text-lg text-gray-100 mb-8 max-w-2xl mx-auto">
             Contact us to place your order or for bulk inquiries. We offer competitive prices and fast delivery.
           </p>

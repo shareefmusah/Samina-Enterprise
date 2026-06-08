@@ -30,11 +30,11 @@ export default function Navigation() {
           <Link to="/" className="flex items-center space-x-2 group">
             <img 
               src="/saminalogo.jpg" 
-              alt="Samina Enterprise Logo" 
+              alt="Samiina Enterprise Logo" 
               className="w-10 h-10 object-contain rounded-full border border-gray-100"
             />
             <span className="text-base sm:text-lg font-bold text-primary group-hover:text-secondary transition-colors">
-              Samina Enterprise
+              Samiina Enterprise
             </span>
           </Link>
 

@@ -29,7 +29,7 @@ const TEAM_MEMBERS = [
     name: 'Executive Director',
     role: 'CEO & Founder',
     image: null, // Replace with path like '/team/ceo.jpg'
-    description: 'Leading the vision of Samina Enterprise to bring wholesome nutrition to every Ghanaian home.',
+    description: 'Leading the vision of Samiina Enterprise to bring wholesome nutrition to every Ghanaian home.',
   },
   {
     name: 'Operations Team',
@@ -64,7 +64,7 @@ export default function About() {
       <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-16 md:pt-48 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">About Samina Enterprise</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">About Samiina Enterprise</h1>
             <p className="text-xl text-gray-100">
               Bringing wholesome nutrition to every Ghanaian home.
             </p>
@@ -79,7 +79,7 @@ export default function About() {
             <div className="animate-fade-in-left">
               <h2 className="text-4xl font-bold mb-6 text-dark dark:text-white">Our Story</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                Samina Enterprise was founded with a simple yet powerful vision: to provide premium processed foods that are both nutritious and delicious. We started our journey with a commitment to excellence and a passion for improving family nutrition across Ghana.
+                Samiina Enterprise was founded with a simple yet powerful vision: to provide premium processed foods that are both nutritious and delicious. We started our journey with a commitment to excellence and a passion for improving family nutrition across Ghana.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                 What began as a small operation has grown into a trusted brand serving thousands of families throughout Ghana. Our success is built on three pillars: quality ingredients, hygienic processing, and a deep understanding of our customers' needs.
@@ -92,7 +92,7 @@ export default function About() {
               <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
                 <img 
                   src="/saminalogo.jpg" 
-                  alt="Samina Enterprise Branding" 
+                  alt="Samiina Enterprise Branding" 
                   className="w-full h-auto rounded-2xl"
                   loading="lazy"
                   decoding="async"
@@ -118,7 +118,7 @@ export default function About() {
                 To produce and deliver premium, naturally processed foods that nourish families and promote healthy living across Ghana. We are committed to sourcing the finest local ingredients and processing them with the highest standards of hygiene and care.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mt-6 leading-relaxed">
-                Our mission extends beyond products; we aim to build a community of health-conscious consumers who trust Samina Enterprise as their partner in nutrition and wellness.
+                Our mission extends beyond products; we aim to build a community of health-conscious consumers who trust Samiina Enterprise as their partner in nutrition and wellness.
               </p>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-dark dark:text-white">Meet Our Team</h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-            The dedicated professionals behind the quality and excellence of Samina Enterprise.
+            The dedicated professionals behind the quality and excellence of Samiina Enterprise.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -270,7 +270,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Our Commitment to You</h2>
           <p className="text-lg text-gray-100 max-w-2xl mx-auto">
-            At Samina Enterprise, we are dedicated to continuous improvement, innovation, and maintaining the highest standards of quality and customer service. Your trust is our most valued asset.
+            At Samiina Enterprise, we are dedicated to continuous improvement, innovation, and maintaining the highest standards of quality and customer service. Your trust is our most valued asset.
           </p>
         </div>
       </section>

@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="animate-fade-in-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-xl text-gray-100">
-              Get in touch with Samina Enterprise today.
+              Get in touch with Samiina Enterprise today.
             </p>
           </div>
         </div>
@@ -138,10 +138,10 @@ export default function Contact() {
               <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Email</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">Send us a message</p>
               <a
-                href="mailto:info@samina.com"
+                href="mailto:info@samiina.com"
                 className="text-primary font-bold hover:text-secondary transition-colors break-all"
               >
-                info@samina.com
+                info@samiina.com
               </a>
             </div>
 
@@ -309,7 +309,7 @@ export default function Contact() {
                         <span className="font-semibold text-primary">8:00 AM - 2:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-700">Sunday</span>
+                        <span className="text-gray-700 dark:text-gray-300">Sunday</span>
                         <span className="font-semibold text-gray-400">Closed</span>
                       </div>
                     </div>
@@ -321,11 +321,11 @@ export default function Contact() {
               <h3 className="text-2xl font-bold mb-4 text-dark dark:text-white">Find Us on the Map</h3>
               <div className="rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
                 <iframe
-                  title="Samina Location"
+                  title="Samiina Location"
                   width="100%"
                   height="100%"
                   frameBorder="0"
-                  src="https://www.google.com/maps/place/Samiina+Foods/@9.4282366,-0.8473981,18z/data=!4m9!1m2!2m1!1ssamina+enterprise+location+near+Tamale!3m5!1s0xfd43d3d71b674f5:0xdc103260152c10ba!8m2!3d9.4282367!4d-0.8457455!16s%2Fg%2F11sycy7z77?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                  src="https://www.google.com/maps/place/Samiina+Foods/@9.4282366,-0.8473981,18z/data=!4m9!1m2!2m1!1ssamiina+enterprise+location+near+Tamale!3m5!1s0xfd43d3d71b674f5:0xdc103260152c10ba!8m2!3d9.4282367!4d-0.8457455!16s%2Fg%2F11sycy7z77?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

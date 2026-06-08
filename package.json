@@ -1,7 +1,7 @@
 {
-  "name": "samina-enterprise",
+  "name": "samiina-enterprise",
   "version": "1.0.0",
-  "description": "Professional website for Samina Enterprise - Processed Food Business",
+  "description": "Professional website for Samiina Enterprise - Processed Food Business",
   "type": "module",
   "scripts": {
     "dev": "vite",

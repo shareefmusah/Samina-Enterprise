@@ -1,6 +1,6 @@
-# Samina Enterprise - Professional Website
+# Samiina Enterprise - Professional Website
 
-A complete, professional, fully responsive multi-page website for Samina Enterprise, a Ghanaian processed food business showcasing products and company information.
+A complete, professional, fully responsive multi-page website for Samiina Enterprise, a Ghanaian processed food business showcasing products and company information.
 
 ## Features
 
@@ -259,7 +259,7 @@ This project is created for NutriMix Foods Ghana.
 ## Support
 
 For issues or questions:
-- Email: info@samina.com
+- Email: info@samiina.com
 - Phone: +233 123 456 789
 - WhatsApp: +233 123 456 789
 

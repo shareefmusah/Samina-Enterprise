@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="animate-fade-in-left">
             <div className="flex items-center space-x-2 mb-4">
               <LogoIcon />
-              <h3 className="text-xl font-bold text-secondary">Samina Enterprise</h3>
+              <h3 className="text-xl font-bold text-secondary">Samiina Enterprise</h3>
             </div>
             <p className="text-gray-300 text-sm">
               Premium processed foods made in Ghana. Quality ingredients, naturally processed for every family.
@@ -62,7 +62,7 @@ export default function Footer() {
                 <EmailIcon />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p>info@samina.com</p>
+                  <p>info@samiina.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 hover:text-secondary transition-colors">
@@ -123,7 +123,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-700 py-8">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; {currentYear} Samina Enterprise. All rights reserved.</p>
+            <p>&copy; {currentYear} Samiina Enterprise. All rights reserved.</p>
             <p className="mt-2">Crafted with care for healthy living</p>
           </div>
         </div>

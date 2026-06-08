@@ -15,7 +15,7 @@ export default function LoadingAnimation() {
 
         {/* Loading Text */}
         <p className="text-primary font-semibold text-lg animate-pulse">
-          Samina Enterprise
+          Samiina Enterprise
         </p>
       </div>
     </div>
