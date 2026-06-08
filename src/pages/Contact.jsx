@@ -79,7 +79,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="page-enter">
+    <div className="page-enter dark:bg-gray-950 transition-colors duration-300">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-green-700 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,16 +95,16 @@ export default function Contact() {
       {/* Contact Information Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-dark">How to Reach Us</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-dark dark:text-white">How to Reach Us</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Phone */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up">
               <div className="inline-block bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
                 <PhoneIcon />
               </div>
-              <h3 className="text-xl font-bold text-dark mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-2">Speak with our team</p>
+              <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Call Us</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Speak with our team</p>
               <a
                 href="tel:+2332468284621"
                 className="text-primary font-bold hover:text-secondary transition-colors"
@@ -114,12 +114,12 @@ export default function Contact() {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="inline-block bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
                 <WhatsAppIcon />
               </div>
-              <h3 className="text-xl font-bold text-dark mb-2">WhatsApp</h3>
-              <p className="text-gray-600 mb-2">Quick messaging</p>
+              <h3 className="text-xl font-bold text-dark dark:text-white mb-2">WhatsApp</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Quick messaging</p>
               <a
                 href="https://wa.me/2332468284621"
                 target="_blank"
@@ -131,12 +131,12 @@ export default function Contact() {
             </div>
 
             {/* Email */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="inline-block bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
                 <EmailIcon />
               </div>
-              <h3 className="text-xl font-bold text-dark mb-2">Email</h3>
-              <p className="text-gray-600 mb-2">Send us a message</p>
+              <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Email</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Send us a message</p>
               <a
                 href="mailto:info@samina.com"
                 className="text-primary font-bold hover:text-secondary transition-colors break-all"
@@ -146,19 +146,19 @@ export default function Contact() {
             </div>
 
             {/* Location */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="inline-block bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
                 <MapIcon />
               </div>
-              <h3 className="text-xl font-bold text-dark mb-2">Visit us</h3>
-              <p className="text-gray-600 mb-2">Our office</p>
+              <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Visit us</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Our office</p>
               <a
                 href="https://www.google.com/maps/place/Samiina+Foods/@9.4282366,-0.8473981,18z/data=!4m9!1m2!2m1!1ssamina+enterprise+location+near+Tamale!3m5!1s0xfd43d3d71b674f5:0xdc103260152c10ba!8m2!3d9.4282367!4d-0.8457455!16s%2Fg%2F11sycy7z77?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-bold hover:text-secondary transition-colors"
               >
-                Tamale, Agric Quarters, Ghana
+                Tamale, Northern Region, Ghana
               </a>
             </div>
           </div>
@@ -166,12 +166,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-light dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
             <div className="animate-fade-in-left">
-              <h2 className="text-4xl font-bold mb-8 text-dark">Send us a Message</h2>
+              <h2 className="text-4xl font-bold mb-8 text-dark dark:text-white">Send us a Message</h2>
 
               {submitSuccess && (
                 <div className="mb-6 p-4 bg-green-50 border-2 border-green-400 text-green-700 rounded-lg animate-scale-in">
@@ -183,7 +183,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-dark font-semibold mb-2">
+                  <label htmlFor="name" className="block text-dark dark:text-gray-200 font-semibold mb-2">
                     Full Name *
                   </label>
                   <input
@@ -195,7 +195,7 @@ export default function Contact() {
                     className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
                       formErrors.name
                         ? 'border-red-500 focus:border-red-600'
-                        : 'border-gray-300 focus:border-primary'
+                        : 'border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-primary'
                     }`}
                     placeholder="Your name"
                   />
@@ -206,7 +206,7 @@ export default function Contact() {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-dark font-semibold mb-2">
+                  <label htmlFor="email" className="block text-dark dark:text-gray-200 font-semibold mb-2">
                     Email Address *
                   </label>
                   <input
@@ -218,7 +218,7 @@ export default function Contact() {
                     className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
                       formErrors.email
                         ? 'border-red-500 focus:border-red-600'
-                        : 'border-gray-300 focus:border-primary'
+                        : 'border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-primary'
                     }`}
                     placeholder="your@email.com"
                   />
@@ -229,7 +229,7 @@ export default function Contact() {
 
                 {/* Phone Field */}
                 <div>
-                  <label htmlFor="phone" className="block text-dark font-semibold mb-2">
+                  <label htmlFor="phone" className="block text-dark dark:text-gray-200 font-semibold mb-2">
                     Phone Number *
                   </label>
                   <input
@@ -241,7 +241,7 @@ export default function Contact() {
                     className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
                       formErrors.phone
                         ? 'border-red-500 focus:border-red-600'
-                        : 'border-gray-300 focus:border-primary'
+                        : 'border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-primary'
                     }`}
                     placeholder="+233 123 456 789"
                   />
@@ -252,7 +252,7 @@ export default function Contact() {
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-dark font-semibold mb-2">
+                  <label htmlFor="message" className="block text-dark dark:text-gray-200 font-semibold mb-2">
                     Message *
                   </label>
                   <textarea
@@ -264,7 +264,7 @@ export default function Contact() {
                     className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors resize-none ${
                       formErrors.message
                         ? 'border-red-500 focus:border-red-600'
-                        : 'border-gray-300 focus:border-primary'
+                        : 'border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-primary'
                     }`}
                     placeholder="Tell us how we can help..."
                   />
@@ -282,30 +282,30 @@ export default function Contact() {
                 </button>
               </form>
 
-              <p className="text-gray-600 text-sm mt-6 text-center">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mt-6 text-center">
                 We typically respond within 24 hours during business days.
               </p>
             </div>
 
             {/* Business Hours */}
             <div className="animate-fade-in-right">
-              <h2 className="text-4xl font-bold mb-8 text-dark">Business Hours</h2>
+              <h2 className="text-4xl font-bold mb-8 text-dark dark:text-white">Business Hours</h2>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
+              <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg mb-8 transition-colors duration-300">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="inline-block bg-primary bg-opacity-10 p-3 rounded-lg">
                     <ClockIcon />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-dark mb-4">Office Hours</h3>
+                    <h3 className="text-xl font-bold text-dark dark:text-white mb-4">Office Hours</h3>
 
                     <div className="space-y-3">
                       <div className="flex justify-between">
-                        <span className="text-gray-700">Monday - Friday</span>
+                        <span className="text-gray-700 dark:text-gray-300">Monday - Friday</span>
                         <span className="font-semibold text-primary">8:00 AM - 5:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-700">Saturday</span>
+                        <span className="text-gray-700 dark:text-gray-300">Saturday</span>
                         <span className="font-semibold text-primary">8:00 AM - 2:00 PM</span>
                       </div>
                       <div className="flex justify-between">
@@ -318,7 +318,7 @@ export default function Contact() {
               </div>
 
               {/* Map Section */}
-              <h3 className="text-2xl font-bold mb-4 text-dark">Find Us on the Map</h3>
+              <h3 className="text-2xl font-bold mb-4 text-dark dark:text-white">Find Us on the Map</h3>
               <div className="rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
                 <iframe
                   title="Samina Location"

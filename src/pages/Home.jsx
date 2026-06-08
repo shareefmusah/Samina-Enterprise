@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRightIcon, QualityIcon, NutritionIcon, HygieneIcon, LocalIcon, QuoteIcon, StarIcon } from '../components/Icons'
+import { ArrowRightIcon, QualityIcon, NutritionIcon, HygieneIcon, LocalIcon, QuoteIcon, StarIcon, CloseIcon, ShareIcon } from '../components/Icons'
 
 const FEATURED_PRODUCTS = [
   {
@@ -98,8 +98,33 @@ const TESTIMONIALS = [
 ]
 
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState(null)
+
+  const openModal = (product) => {
+    setSelectedProduct(product)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setSelectedProduct(null)
+    document.body.style.overflow = 'unset'
+  }
+
+  const handleShare = (product) => {
+    if (navigator.share) {
+      navigator.share({
+        title: `Samina Enterprise - ${product.name}`,
+        text: product.description,
+        url: window.location.href,
+      }).catch(() => {})
+    } else {
+      navigator.clipboard.writeText(window.location.href)
+      alert('Link copied to clipboard!')
+    }
+  }
+
   return (
-    <div className="page-enter">
+    <div className="page-enter dark:bg-gray-950 transition-colors duration-300">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-20 md:pt-48 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,6 +158,7 @@ export default function Home() {
                   src="/saminalogo.jpg" 
                   alt="Samina Enterprise" 
                   className="w-full h-auto rounded-2xl"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -141,10 +167,10 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-light dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-dark">Why Choose Us?</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4 text-dark dark:text-white">Why Choose Us?</h2>
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
             Discover what makes Samina Enterprise the preferred choice for families across Ghana.
           </p>
 
@@ -154,14 +180,14 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-up"
+                  className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="mb-4">
                     <Icon />
                   </div>
-                  <h3 className="text-xl font-bold text-dark mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <h3 className="text-xl font-bold text-dark dark:text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
                 </div>
               )
             })}
@@ -172,8 +198,8 @@ export default function Home() {
       {/* Featured Products Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-dark">Featured Products</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4 text-dark dark:text-white">Featured Products</h2>
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
             Explore our most popular and trusted food products.
           </p>
 
@@ -181,11 +207,12 @@ export default function Home() {
             {FEATURED_PRODUCTS.map((product, index) => (
               <div
                 key={product.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-scale-in"
+                onClick={() => openModal(product)}
+                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-scale-in cursor-pointer group border border-transparent dark:border-gray-700"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Product Image Placeholder */}
-                <div className="h-64 flex items-center justify-center relative overflow-hidden bg-gray-100">
+                <div className="h-64 flex items-center justify-center relative overflow-hidden bg-gray-100 dark:bg-gray-700">
                   <img 
                     src={product.image} 
                     alt={product.name} 
@@ -199,10 +226,19 @@ export default function Home() {
                       {product.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-dark mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                  <h3 className="text-xl font-bold text-dark dark:text-white mb-2">{product.name}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{product.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-secondary">GHS {product.price}</span>
+                    <a
+                      href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in ordering the ${product.name}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="bg-primary text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-secondary transition-all animate-pulse shadow-lg shadow-primary/20"
+                    >
+                      Order Now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -220,6 +256,70 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Product Details Modal */}
+      {selectedProduct && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={closeModal}>
+          <div 
+            className="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden relative animate-scale-in shadow-2xl flex flex-col md:flex-row"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button 
+              onClick={closeModal}
+              className="absolute top-4 right-4 p-2 rounded-full bg-white/80 dark:bg-gray-700/80 hover:bg-white dark:hover:bg-gray-700 text-dark dark:text-white shadow-md transition-colors z-10"
+            >
+              <CloseIcon />
+            </button>
+
+            {/* Product Image */}
+            <div className="w-full md:w-1/2 h-64 md:h-auto bg-gray-50">
+              <img 
+                src={selectedProduct.image} 
+                alt={selectedProduct.name} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Product Info */}
+            <div className="w-full md:w-1/2 p-8 overflow-y-auto dark:text-white">
+              <div className="mb-4">
+                <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {selectedProduct.category}
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold text-dark dark:text-white mb-4">{selectedProduct.name}</h2>
+              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                {selectedProduct.description}
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                  <span className="text-gray-500 dark:text-gray-400 font-medium">Standard Price</span>
+                  <span className="text-2xl font-bold text-secondary">GHS {selectedProduct.price}</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in ordering the ${selectedProduct.name}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"
+                >
+                  Order via WhatsApp
+                </a>
+                <button
+                  onClick={() => handleShare(selectedProduct)}
+                  className="sm:w-auto px-6 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center"
+                >
+                  <ShareIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Testimonials Section */}
       <section className="py-20 bg-light">

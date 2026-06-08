@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { SearchIcon, FilterIcon } from '../components/Icons'
+import { SearchIcon, FilterIcon, CloseIcon, ShareIcon } from '../components/Icons'
 
 const ALL_PRODUCTS = [
   {
@@ -115,9 +115,10 @@ const ALL_PRODUCTS = [
 const CATEGORIES = [
   'All Products',
   'Cereals',
-  'Legumes',
+  'Beverages',
   'Nuts',
   'Blends',
+  'Spices',
   'Special Products',
 ]
 
@@ -125,6 +126,7 @@ export default function Inventory() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All Products')
   const [showMobileFilter, setShowMobileFilter] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const filteredProducts = useMemo(() => {
     return ALL_PRODUCTS.filter((product) => {
@@ -139,8 +141,36 @@ export default function Inventory() {
     })
   }, [searchQuery, selectedCategory])
 
+  const resetFilters = () => {
+    setSearchQuery('')
+    setSelectedCategory('All Products')
+  }
+
+  const openModal = (product) => {
+    setSelectedProduct(product)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setSelectedProduct(null)
+    document.body.style.overflow = 'unset'
+  }
+
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: `Samina Enterprise - ${selectedProduct.name}`,
+        text: selectedProduct.description,
+        url: window.location.href,
+      }).catch(() => {})
+    } else {
+      navigator.clipboard.writeText(window.location.href)
+      alert('Link copied to clipboard!')
+    }
+  }
+
   return (
-    <div className="page-enter">
+    <div className="page-enter dark:bg-gray-950 transition-colors duration-300">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-green-700 text-white pt-32 pb-16 md:pt-48 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,7 +184,7 @@ export default function Inventory() {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-8 bg-light border-b border-gray-200">
+      <section className="py-8 bg-light dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Search Bar */}
           <div className="mb-8 animate-fade-in">
@@ -165,7 +195,7 @@ export default function Inventory() {
                 placeholder="Search products by name or description..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none transition-colors"
+                className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:border-primary focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -191,7 +221,7 @@ export default function Inventory() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-primary text-white'
-                      : 'bg-white text-dark border-2 border-primary hover:bg-primary hover:text-white'
+                      : 'bg-white dark:bg-gray-800 text-dark dark:text-gray-300 border-2 border-primary hover:bg-primary hover:text-white'
                   }`}
                 >
                   {category}
@@ -200,7 +230,7 @@ export default function Inventory() {
             </div>
 
             {/* Product Count */}
-            <div className="text-gray-600 font-semibold">
+            <div className="text-gray-600 dark:text-gray-400 font-semibold">
               Showing {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
             </div>
           </div>
@@ -232,22 +262,25 @@ export default function Inventory() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-light dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-scale-in"
+                  onClick={() => openModal(product)}
+                  className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-scale-in cursor-pointer group border border-transparent dark:border-gray-700"
                   style={{ animationDelay: `${(index % 6) * 0.1}s` }}
                 >
                   {/* Product Image Placeholder */}
-                <div className="h-56 flex items-center justify-center relative overflow-hidden bg-gray-50 border-b border-gray-100">
+                <div className="h-56 flex items-center justify-center relative overflow-hidden bg-gray-50 dark:bg-gray-700 border-b border-gray-100 dark:border-gray-700">
                   <img 
                     src={product.image} 
                     alt={product.name} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
                   </div>
 
@@ -260,19 +293,19 @@ export default function Inventory() {
                     </div>
 
                     {/* Product Name */}
-                    <h3 className="text-xl font-bold text-dark mb-2">{product.name}</h3>
+                    <h3 className="text-xl font-bold text-dark dark:text-white mb-2">{product.name}</h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{product.description}</p>
 
                     {/* Weight and Price */}
-                    <div className="border-t pt-4 flex justify-between items-center">
+                    <div className="border-t dark:border-gray-700 pt-4 flex justify-between items-center">
                       <div>
-                        <p className="text-gray-500 text-sm">Weight</p>
-                        <p className="text-dark font-semibold">{product.weight}</p>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm">Weight</p>
+                        <p className="text-dark dark:text-white font-semibold">{product.weight}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-gray-500 text-sm">Price</p>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm">Price</p>
                         <p className="text-2xl font-bold text-secondary">GHS {product.price}</p>
                       </div>
                     </div>
@@ -281,15 +314,91 @@ export default function Inventory() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <p className="text-xl text-gray-600 mb-2">No products found</p>
-              <p className="text-gray-500">
+            <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-2xl shadow-inner">
+              <SearchIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <p className="text-2xl font-bold text-dark mb-2">No products found</p>
+              <p className="text-gray-500 mb-8">
                 Try adjusting your search or filter criteria
               </p>
+              <button
+                onClick={resetFilters}
+                className="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-secondary transition-all"
+              >
+                Clear All Filters
+              </button>
             </div>
           )}
         </div>
       </section>
+
+      {/* Product Details Modal */}
+      {selectedProduct && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={closeModal}>
+          <div 
+            className="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden relative animate-scale-in shadow-2xl flex flex-col md:flex-row"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button 
+              onClick={closeModal}
+              className="absolute top-4 right-4 p-2 rounded-full bg-white/80 dark:bg-gray-700/80 hover:bg-white dark:hover:bg-gray-700 text-dark dark:text-white shadow-md transition-colors z-10"
+            >
+              <CloseIcon />
+            </button>
+
+            {/* Product Image */}
+            <div className="w-full md:w-1/2 h-64 md:h-auto bg-gray-50">
+              <img 
+                src={selectedProduct.image} 
+                alt={selectedProduct.name} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Product Info */}
+            <div className="w-full md:w-1/2 p-8 overflow-y-auto dark:text-white">
+              <div className="mb-4">
+                <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {selectedProduct.category}
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold text-dark dark:text-white mb-4">{selectedProduct.name}</h2>
+              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                {selectedProduct.description}
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                  <span className="text-gray-500 dark:text-gray-400 font-medium">Standard Weight</span>
+                  <span className="font-bold text-dark dark:text-white">{selectedProduct.weight}</span>
+                </div>
+                <div className="flex justify-between border-b border-gray-100 dark:border-gray-700 pb-2">
+                  <span className="text-gray-500 dark:text-gray-400 font-medium">Price</span>
+                  <span className="text-2xl font-bold text-secondary">GHS {selectedProduct.price}</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href={`https://wa.me/2332468284621?text=Hello Samina Marketing Team, I'm interested in the ${selectedProduct.name}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"
+                >
+                  Order via WhatsApp
+                </a>
+                <button
+                  onClick={handleShare}
+                  className="sm:w-auto px-6 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all transform hover:scale-[1.02] flex items-center justify-center"
+                >
+                  <ShareIcon />
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-primary to-green-700 text-white py-16">
