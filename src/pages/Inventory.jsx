@@ -8,7 +8,7 @@ const ALL_PRODUCTS = [
     category: 'Beverages',
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
-    price: '30',
+    price: '75',
     image: '/samina1.jpg'
   },
   {
@@ -17,7 +17,7 @@ const ALL_PRODUCTS = [
     category: 'Spices',
     description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '1kg',
-    price: '40',
+    price: '25',
     image: '/samina2.jpg'
   },
   {
@@ -26,7 +26,7 @@ const ALL_PRODUCTS = [
     category: 'Special Products',
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     weight: '500g',
-    price: '35',
+    price: '75',
     image: '/samina3.jpg'
   },
   {
@@ -35,7 +35,7 @@ const ALL_PRODUCTS = [
     category: 'Nuts',
     description: 'A nutritious blend of cereals and legumes, enriched with cashew nuts for added flavor and health benefits',
     weight: '500g',
-    price: '45',
+    price: '35',
     image: '/samina4.jpg'
   },
   {
@@ -44,7 +44,7 @@ const ALL_PRODUCTS = [
     category: 'Beverages',
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
-    price: '30',
+    price: '35',
     image: '/samina5.jpg'
   },
   {
@@ -62,7 +62,7 @@ const ALL_PRODUCTS = [
     category: 'Special Products',
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
     weight: '500g',
-    price: '200',
+    price: '600',
     image: '/samina7.jpg'
   },
   {
@@ -71,7 +71,7 @@ const ALL_PRODUCTS = [
     category: 'Special Products',
     description: 'Finely ground ginger powder made from fresh ginger roots, perfect for cooking and baking',
     weight: '500g',
-    price: '42',
+    price: '30',
     image: '/samina8.jpg'
   },
   {
@@ -80,7 +80,7 @@ const ALL_PRODUCTS = [
     category: 'Cereals',
     description: 'Spicy millet flour (CerealPlus) for traditional Ghanaian breakfast',
     weight: '500g',
-    price: '36',
+    price: '30',
     image: '/samina9.jpg'
   },
   {
@@ -89,7 +89,7 @@ const ALL_PRODUCTS = [
     category: 'Beverages',
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
     weight: '500g',
-    price: '30',
+    price: '35',
     image: '/samina1.jpg'
   },
   {
@@ -98,7 +98,7 @@ const ALL_PRODUCTS = [
     category: 'Nuts',
     description: 'Premium blend of roasted nuts and seeds',
     weight: '500g',
-    price: '50',
+    price: '35',
     image: '/samina4.jpg'
   },
   {
@@ -107,7 +107,7 @@ const ALL_PRODUCTS = [
     category: 'Blends',
     description: 'A blend of natural spices sourced from Ghanaian farmers',
     weight: '500g',
-    price: '44',
+    price: '25',
     image: '/samina2.jpg'
   },
 ]
@@ -380,7 +380,7 @@ export default function Inventory() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in the ${selectedProduct.name}.`}
+                  href={`https://wa.me/2332441170600?text=Hello Samiina Marketing Team, I'm interested in the ${selectedProduct.name}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"

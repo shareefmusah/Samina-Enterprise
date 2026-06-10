@@ -55,7 +55,10 @@ export default function Footer() {
                 <PhoneIcon />
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p>+233 24 6828 4621</p>
+                  <div className="flex flex-col">
+                    <p>+233 244 117 0600</p>
+                    <p>+233 241 170 400</p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start space-x-3 hover:text-secondary transition-colors">
@@ -94,7 +97,7 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
               <a
-                href="https://wa.me/2332468284621"
+                href="https://wa.me/2332441170600"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-gray-700 hover:bg-secondary transition-colors"
@@ -123,8 +126,8 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-700 py-8">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; {currentYear} Samiina Enterprise. All rights reserved.</p>
-            <p className="mt-2">Crafted with care for healthy living</p>
+            <p>&copy; {currentYear} Samiina Enterprise. All rights reserved. Developed by Shareef Technologies</p>
+            <p className="mt-2">Crafted with care for healthy living and digital excellence.</p>
           </div>
         </div>
       </div>

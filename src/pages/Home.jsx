@@ -7,7 +7,7 @@ const FEATURED_PRODUCTS = [
     id: 1,
     name: 'Dawadawa Beverage',
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
-    price: '30',
+    price: '35',
     category: 'Beverages',
     image: '/samina1.jpg'
   },
@@ -15,7 +15,7 @@ const FEATURED_PRODUCTS = [
     id: 2,
     name: 'Natural Spices',
     description: 'A blend of natural spices sourced from Ghanaian farmers, perfect for enhancing the flavor of your dishes',
-    price: '40',
+    price: '25',
     category: 'Cereals',
     image: '/samina2.jpg'
   },
@@ -23,7 +23,7 @@ const FEATURED_PRODUCTS = [
     id: 3,
     name: 'native honey',
     description: 'Premium quality honey sourced from local Ghanaian beekeepers, rich in flavor and nutrients',
-    price: '45',
+    price: '75',
     category: 'Nuts',
     image: '/samina3.jpg'
   },
@@ -39,7 +39,7 @@ const FEATURED_PRODUCTS = [
     id: 5,
     name: 'Dawadawa Beverage',
     description: 'Traditional Ghanaian nutritional beverage made from fermented locust beans',
-    price: '38',
+    price: '35',
     category: 'Beverages',
     image: '/samina5.jpg'
   },
@@ -47,7 +47,7 @@ const FEATURED_PRODUCTS = [
     id: 6,
     name: 'Hausa Koko Flour',
     description: 'Spicy millet flour (CerealPlus) for a perfect morning breakfast',
-    price: '36',
+    price: '30',
     category: 'Cereals',
     image: '/samina9.jpg'
   },
@@ -113,7 +113,7 @@ export default function Home() {
   const handleShare = (product) => {
     if (navigator.share) {
       navigator.share({
-      title: `Samiina Enterprise - ${product.name}`,
+        title: `Samiina Enterprise - ${product.name}`,
         text: product.description,
         url: window.location.href,
       }).catch(() => {})
@@ -231,7 +231,7 @@ export default function Home() {
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-secondary">GHS {product.price}</span>
                     <a
-                      href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in ordering the ${product.name}.`}
+                      href={`https://wa.me/2332441170600?text=Hello Samiina Marketing Team, I'm interested in ordering the ${product.name}.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -302,7 +302,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/2332468284621?text=Hello Samiina Marketing Team, I'm interested in ordering the ${selectedProduct.name}.`}
+                  href={`https://wa.me/2332441170600?text=Hello Samiina Marketing Team, I'm interested in ordering the ${selectedProduct.name}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-primary text-white text-center font-bold py-4 rounded-xl hover:bg-secondary transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center animate-pulse"

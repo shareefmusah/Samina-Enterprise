@@ -260,8 +260,8 @@ This project is created for NutriMix Foods Ghana.
 
 For issues or questions:
 - Email: info@samiina.com
-- Phone: +233 123 456 789
-- WhatsApp: +233 123 456 789
+- Phone: +233 244 117 0600 / +233 241 170 400
+- WhatsApp: +233 244 117 0600
 
 ---
 

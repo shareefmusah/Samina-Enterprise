@@ -26,34 +26,40 @@ const VALUES = [
 
 const TEAM_MEMBERS = [
   {
-    name: 'Executive Director',
-    role: 'CEO & Founder',
+    name: 'Salatu Abubakar',
+    role: 'Founder & CEO',
     image: null, // Replace with path like '/team/ceo.jpg'
     description: 'Leading the vision of Samiina Enterprise to bring wholesome nutrition to every Ghanaian home.',
   },
   {
-    name: 'Operations Team',
+    name: 'Rahima Salifu',
     role: 'Processing Department',
     image: null,
     description: 'Specialists in hygienic processing and natural food preservation standards.',
   },
   {
-    name: 'Growth Team',
-    role: 'Marketing Department',
+    name: 'Rahmat Musah',
+    role: 'Head of Quality Assurance',
+    image: null,
+    description: 'Ensuring every product meets our rigorous safety and nutritional standards through constant monitoring.',
+  },
+  {
+    name: 'Amin Yuorindi jr.',
+    role: 'Head of Marketing & Promotions',
     image: null,
     description: 'Connecting our natural products with health-conscious families across the region.',
   },
   {
-    name: 'Support Team',
-    role: 'Customer Care',
+    name: 'Sadia Abubakar',
+    role: 'Head of Procurement Department',
     image: null,
-    description: 'Dedicated to providing an exceptional service experience and handling inquiries.',
+    description: 'Expertise in sourcing premium raw materials and managing supply chain efficiency.',
   },
   {
-    name: 'Digital Team',
-    role: 'IT Support',
+    name: 'Shareef Musah',
+    role: 'Head of Digital Innovation & Administration',
     image: null,
-    description: 'Managing our digital infrastructure to ensure seamless operations and connectivity.',
+    description: 'Managing our digital infrastructure and administrative operations for seamless growth.',
   },
 ]
 
@@ -132,7 +138,7 @@ export default function About() {
             <div className="animate-fade-in-left">
               <h2 className="text-4xl font-bold mb-6 text-dark dark:text-white">Our Vision</h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                To become West Africa\&apos;s most trusted brand for naturally processed foods, recognized for our unwavering commitment to quality, sustainability, and customer satisfaction.
+                To become West Africa's most trusted brand for naturally processed foods, recognized for our unwavering commitment to quality, sustainability, and customer satisfaction.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mt-6 leading-relaxed">
                 We envision a future where every Ghanaian family has access to affordable, nutritious, and delicious processed foods that support their health and wellbeing. We aim to expand our reach beyond Ghana while maintaining our core values and commitment to local sourcing.

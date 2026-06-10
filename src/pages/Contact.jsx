@@ -105,12 +105,20 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Call Us</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">Speak with our team</p>
-              <a
-                href="tel:+2332468284621"
-                className="text-primary font-bold hover:text-secondary transition-colors"
-              >
-                +233 24 6828 4621
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="tel:+2332441170600"
+                  className="text-primary font-bold hover:text-secondary transition-colors"
+                >
+                  +233 244 117 0600
+                </a>
+                <a
+                  href="tel:+233241170400"
+                  className="text-primary font-bold hover:text-secondary transition-colors"
+                >
+                  +233 241 170 400
+                </a>
+              </div>
             </div>
 
             {/* WhatsApp */}
@@ -120,14 +128,24 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-dark dark:text-white mb-2">WhatsApp</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-2">Quick messaging</p>
-              <a
-                href="https://wa.me/2332468284621"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-bold hover:text-secondary transition-colors"
-              >
-                +233 24 6828 4621
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="https://wa.me/2332441170600"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-bold hover:text-secondary transition-colors"
+                >
+                  +233 244 117 0600
+                </a>
+                <a
+                  href="https://wa.me/233241170400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-bold hover:text-secondary transition-colors"
+                >
+                  +233 241 170 400
+                </a>
+              </div>
             </div>
 
             {/* Email */}
